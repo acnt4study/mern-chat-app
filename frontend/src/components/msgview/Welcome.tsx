@@ -1,0 +1,15 @@
+import { TbMessages } from 'react-icons/tb';
+
+const Welcome = () => {
+  return (
+    <div className="flex h-full w-full items-center justify-center">
+      <div className="flex flex-col items-center gap-2 px-4 text-center font-semibold text-gray-200 sm:text-lg md:text-xl">
+        <p>Welcome 👋 User</p>
+        <p>Select a chat to start messaging...</p>
+        <TbMessages className="text-center text-3xl md:text-6xl" />
+      </div>
+    </div>
+  );
+};
+
+export default Welcome;
