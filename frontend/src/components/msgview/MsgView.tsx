@@ -1,12 +1,21 @@
+import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import Messages from './Messages';
 import MsgInp from './MsgInp';
 import Welcome from './Welcome';
+import { useEffect } from 'react';
+import { fetchMessages } from './MessagesSlice';
 
 const MsgView = () => {
-  const noChat = false;
+  const selected = useAppSelector((state) => state.people.selected);
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    if (selected) {
+      dispatch(fetchMessages());
+    }
+  }, [dispatch, selected]);
   return (
     <div className="flex flex-col md:min-w-[450px]">
-      {noChat ? (
+      {!selected ? (
         <Welcome />
       ) : (
         <>
