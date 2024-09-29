@@ -5,18 +5,20 @@ const Message = ({ data, sPic, rPic, id }) => {
   const pic = isSender ? sPic : rPic;
   const time = formatTime(data.createdAt);
   return (
-    <div className={`chat ${isSender ? 'chat-start' : 'chat-end'}`}>
+    <div
+      className={`chat ${isSender ? 'chat-start' : 'chat-end'} ${data.shake ? 'tilt-shaking' : ''}`}
+    >
       <div className="avatar chat-image">
         <div className="w-10 rounded-full">
           <img src={pic} alt="avatar" />
         </div>
       </div>
       <div
-        className={`chat-bubble ${isSender ? 'bg-blue-500' : ''} text-white`}
+        className={`chat-bubble ${isSender ? 'bg-blue-500' : 'bg-black'} text-white`}
       >
         {data.msg}
       </div>
-      <div className="chat-footer flex items-center gap-1 text-xs opacity-50">
+      <div className="chat-footer flex items-center gap-1 text-xs opacity-75">
         {time}
       </div>
     </div>

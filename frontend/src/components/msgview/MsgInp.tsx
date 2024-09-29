@@ -19,7 +19,7 @@ const MsgInp = () => {
       <div className="relative w-full">
         <input
           type="text"
-          className="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white"
+          className="input block w-full rounded-lg bg-white p-2.5 text-sm text-black"
           placeholder="Send a msg..."
           value={msg}
           onChange={(e) => setMsg(e.target.value)}
@@ -31,7 +31,7 @@ const MsgInp = () => {
           {isLoading ? (
             <span className="loading loading-spinner" />
           ) : (
-            <MdSend className="text-white" />
+            <MdSend className="text-black" />
           )}
         </button>
       </div>

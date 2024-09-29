@@ -24,7 +24,7 @@ const Search = () => {
       />
       <button
         type="submit"
-        className="btn btn-circle bg-sky-500 text-white hover:text-sky-500"
+        className="btn btn-circle bg-sky-500 text-white hover:bg-white hover:text-sky-500"
       >
         <MdOutlinePersonSearch className="h-6 w-6" />
       </button>
