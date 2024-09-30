@@ -14,7 +14,7 @@ const SocketContextProvider = ({ children }) => {
   const { user } = useAuthContext();
   useEffect(() => {
     if (user) {
-      const socket = io('http://localhost:7777', {
+      const socket = io('https://viswanath-k-mern-chat-app.onrender.com', {
         query: {
           userId: user.id,
         },
